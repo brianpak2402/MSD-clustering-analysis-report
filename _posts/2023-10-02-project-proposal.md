@@ -53,10 +53,15 @@ Inertia describes how tight our clusters are. Ideally, we want our models to hav
 ## References
 
 [1] T. Bertin-Mahieux, D. P. W. Ellis, B. Whitman, and P. Lamere, "The Million Song Dataset," in Proceedings of the 12th International Soci
+
 [2] Ahmet Elbir and Nizamettin Aydın, “Music genre classification and music recommendation by using deep learning,” Electronics Letters, vol. 56, no. 12, pp. 627–629, Jun. 2020, doi: https://doi.org/10.1049/el.2019.4202.
+
 [3] Y.-H. Cheng and C.-N. Kuo, “Machine Learning for Music Genre Classification Using Visual Mel Spectrum,” Mathematics, vol. 10, no. 23, pp. 4427–4427, Nov. 2022, doi: https://doi.org/10.3390/math10234427.
+
 [4] T. Li, Mitsunori Ogihara, W. Peng, B. Shao, and S. Zhu, “Music Clustering With Features From Different Information Sources,” IEEE Transactions on Multimedia, vol. 11, no. 3, pp. 477–485, Apr. 2009, doi: https://doi.org/10.1109/tmm.2009.2012942.
+
 [5] P. Georges and Ngoc Cuong Nguyen, “Visualizing music similarity: clustering and mapping 500 classical music composers,” Scientometrics, vol. 120, no. 3, pp. 975–1003, Jul. 2019, doi: https://doi.org/10.1007/s11192-019-03166-0.
+
 ‌[6] Aisha Gemala Jondya and Bambang Iswanto, “Indonesian’s Traditional Music Clustering Based on Audio Features,” Procedia Computer Science, Jan. 2017, doi: https://doi.org/10.1016/j.procs.2017.10.019.
 ‌
 
