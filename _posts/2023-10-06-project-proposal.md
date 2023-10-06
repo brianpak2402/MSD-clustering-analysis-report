@@ -67,16 +67,24 @@ Inertia describes how tight our clusters are. Ideally, we want our models to hav
 
 ## Proposed Timeline
 
-Add proposed timeline from start to finish and list each project members’ responsibilities.
+We suggest the following timeline will be needed to complete this project:
+
+| Task               | Timeline                |
+| ------------------ | ----------------------- |
+| Project Proposal   | 9/25/2023 - 10/6/2023   |
+| Model #1 - K-Means | 10/11/2023 - 11/10/2023 |
+| Model #2 - GMM     | 10/23/2023 - 11/10/2023 |
+| Model #3 - HC      | 10/23/2023 - 11/10/2023 |
+| Evaluation         | 11/24/2023 - 12/07/2023 |
 
 ## Contributions
 
 The following contribution table displays responsibilities that each member will tackle as we explore the above problem.
 
-| Member       | Contributions |
-| ------------ | ------------- |
-| Ethan Torone | TBD           |
-| Edward Chen  | TBD           |
-| Brian Pak    | TBD           |
-| John Pham    | TBD           |
-| Vibhav Kumar | TBD           |
+| Member       | Contributions                  |
+| ------------ | ------------------------------ |
+| Ethan Torone | GMM                            |
+| Edward Chen  | Hierarchical Clustering        |
+| Brian Pak    | Analysis & Reporting           |
+| John Pham    | K-Means Clustering             |
+| Vibhav Kumar | Data Cleaning & Pre-Processing |
