@@ -91,4 +91,4 @@ The following contribution table displays responsibilities that each member will
 
 ## Video Presentation
 
-<iframe width="420" height="315" src="https://drive.google.com/file/d/1Btn39F-MkneI5Nijsd63NSz2IpmHHRsr/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://drive.google.com/file/d/1Btn39F-MkneI5Nijsd63NSz2IpmHHRsr/preview" width="640" height="480" allow="autoplay"></iframe>
