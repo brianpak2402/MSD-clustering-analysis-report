@@ -224,10 +224,10 @@ Currently, we have implemented K-Means clustering, Gaussian Mixture Model Cluste
 
 The following contribution table displays responsibilities that each member performed in completing this report:
 
-| Member       | Contributions                                                                                          |
-| ------------ | ------------------------------------------------------------------------------------------------------ |
-| Ethan Torone | GMM - Coding & Results/Discussion                                                                      |
-| Edward Chen  | HC - Coding & Results/Discussion                                                                       |
-| Brian Pak    | Data Cleaning/Pre-Processing - Coding & Reporting, K-Means - Coding, Introduction & Problem Definition |
-| John Pham    | K-Means - Coding & Results/Discussion                                                                  |
-| Vibhav Kumar | Data Cleaning & Pre-Processing - Coding & Reporting, Next Steps                                        |
+| Member       | Contributions                                                                                |
+| ------------ | -------------------------------------------------------------------------------------------- |
+| Ethan Torone | GMM - Coding & Results/Discussion                                                            |
+| Edward Chen  | HC - Coding & Results/Discussion, General Discussion                                         |
+| Brian Pak    | Data Cleaning/Pre-Processing - Coding & Reporting, Introduction, Problem Definition, Methods |
+| John Pham    | K-Means - Coding & Results/Discussion                                                        |
+| Vibhav Kumar | Data Cleaning & Pre-Processing - Coding & Reporting, Next Steps                              |
