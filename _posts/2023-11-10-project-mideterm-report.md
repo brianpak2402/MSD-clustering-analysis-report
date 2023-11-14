@@ -45,30 +45,31 @@ To determine which feature pairs produce the best clusterings, we first perform 
 
 The first clustering algorithm we applied was K-Means clustering. To find the optimal number of clusters, we utilized the elbow method using inertia and decided on 10 to be the best K.
 
-![KMeans Elbow Method](../assets/images/HC%20Elbow%20Method.png)
+<img src="/brianpak2402/assets/images/KM Elbow Method.png" />
+![KMeans Elbow Method](/brianpak2402/assets/images/KM%20Elbow%20Method.png)
 
 After that, we performed pairwise clustering on all possible pairs of features of our numerical attributes to determine which features work best for clustering audio tracks. This also allows us to visualize the data clustering easier. To evaluate the pairwise clusterings, we used multiple internal measures: Davies Bouldin Index, Silhouette Score, Inertia, Calinski-Harabasz Index, and Dunn Index.
 
 **Visualizations of All Feature-Pairwise Clusterings for Numerical Attributes**
-![KMeans Clustering pt1](../assets/images/KM%20Clusterings1.png)
-![KMeans Clustering pt2](../assets/images/KM%20Clusterings2.png)
-![KMeans Clustering pt3](../assets/images/KM%20Clusterings3.png)
+![KMeans Clustering pt1](/brianpak2402/assets/images/KM%20Clusterings1.png)
+![KMeans Clustering pt2](/brianpak2402/assets/images/KM%20Clusterings2.png)
+![KMeans Clustering pt3](/brianpak2402/assets/images/KM%20Clusterings3.png)
 
 **Visualizations of Internal Measures of the Feature-Pairwise Clustering of Numerical Attributes**
-![KMeans DBS](../assets/images/KM%20DBS.png)
-![KMeans Silhouette](../assets/images/KM%20Silhouette.png)
-![KMeans Inertia](../assets/images/KM%20Inertia.png)
-![KMeans KHS](../assets/images/KM%20KHS.png)
-![KMeans Dunn](../assets/images/KM%20Dunn.png)
+![KMeans DBS](/brianpak2402/assets/images/KM%20DBS.png)
+![KMeans Silhouette](/brianpak2402/assets/images/KM%20Silhouette.png)
+![KMeans Inertia](/brianpak2402/assets/images/KM%20Inertia.png)
+![KMeans KHS](/brianpak2402/assets/images/KM%20KHS.png)
+![KMeans Dunn](/brianpak2402/assets/images/KM%20Dunn.png)
 
 Next, we carried out the same procedure for the string data. Using the elbow method with inertia to find the optimal number of clusters and clustering data for pairwise features.
-![KMeans Elbow Method String Data](../assets/images/KM%20Elbow%20Method%20String.png)
-![KMeans Clustering String Data](../assets/images/KM%20String%20Clustering.png)
+![KMeans Elbow Method String Data](/brianpak2402/assets/images/KM%20Elbow%20Method%20String.png)
+![KMeans Clustering String Data](/brianpak2402/assets/images/KM%20String%20Clustering.png)
 Since we are using multiple internal measures, there lies inconsistencies on how well features are paired/clustered in comparison to others. For example, according to Silhouette Score, end of fade in/start of fade out is the second best feature pair for clustering but if we look at the Davies Bouldin visualization, that one says duration/tempo is the second best clustered. In other words, the ranking of feature pairs differ depending on the metric.
 
 To remedy this, we assigned a score/rank for each metric and then gave an average ranking across all metrics. For a given metric, the pair with the best clustering gets a score of 15. The pair with the second best clustering gets a 14 and so on. We then calculate the average across the scores to get the average rankings based on how well the pairs cluster.
 
-![KMeans Rankings Chart](../assets/images/KM%20Rankings%20Chart.png)
+![KMeans Rankings Chart](/brianpak2402/assets/images/KM%20Rankings%20Chart.png)
 
 **Feature Pairs sorted by How Well They Cluster:**
 
@@ -97,27 +98,27 @@ Looking at the results, we can see that songs are best clustered by artist name 
 
 We next applied hierarchical clustering. Using the elbow method with silhouette score as our metric, we decided on 20 as our optimal number of clusters.
 
-![HC Elbow Method](../assets/images/HC%20Elbow%20Method.png)
+![HC Elbow Method](/brianpak2402/assets/images/HC%20Elbow%20Method.png)
 
 We found all possible pairs of the numerical variables, and performed hierarchical clustering on each pair. This allowed us to easily visualize the clustering as well as determine which pairs of variables do the best job at creating clusters.
 
 **Visualizations of Hierarchical Clusterings**
-![HC Clusterings pt1](../assets/images/HC%20Clustering1.png)
-![HC Clusterings pt2](../assets/images/HC%20Clustering2.png)
-![HC Clusterings pt3](../assets/images/HC%20Clustering3.png)
-![HC Clusterings pt4](../assets/images/HC%20Clustering4.png)
-![HC Clusterings pt5](../assets/images/HC%20Clustering5.png)
+![HC Clusterings pt1](/brianpak2402/assets/images/HC%20Clustering1.png)
+![HC Clusterings pt2](/brianpak2402/assets/images/HC%20Clustering2.png)
+![HC Clusterings pt3](/brianpak2402/assets/images/HC%20Clustering3.png)
+![HC Clusterings pt4](/brianpak2402/assets/images/HC%20Clustering4.png)
+![HC Clusterings pt5](/brianpak2402/assets/images/HC%20Clustering5.png)
 
 To evaluate the performance of each pair of variables, we used the following metrics: Silhouette score, Davies-Bouldin index, and Cophenetic coefficient. The following visualizations are the results for all pairs of variables.
 
 **Silhouette Score:**
-![HC Silhouette](../assets/images/HC%20Silhouette.png)
+![HC Silhouette](/brianpak2402/assets/images/HC%20Silhouette.png)
 
 **Davies-Bouldin Index:**
-![HC DBS](../assets/images/KM%20DBS.png)
+![HC DBS](/brianpak2402/assets/images/KM%20DBS.png)
 
 **Cophenetic Coefficient:**
-![HC CPC](../assets/images/HC%20CPC.png)
+![HC CPC](/brianpak2402/assets/images/HC%20CPC.png)
 
 Since performance of a given pair of variables can vary depending on the metric used, we assigned each pair of variables a rank/score that denotes how well it did compared to other pairs in a given metric. For example, if a pair has the highest Silhouette score, then it would have a score of 15 for this metric since it performed the best. We then took the average of all these ranks across the three metrics to produce a general score to have a sense of which pairs performed best overall. The following table is the ranking of all the pairs:
 
@@ -138,41 +139,43 @@ Since performance of a given pair of variables can vary depending on the metric 
 | `start_of_fade_out`/`loudness`           | 3.33  |
 | `duration`/`tempo`                       | 1     |
 
+From hierarchical clustering, artist familiarity/duration performs the best, and it seems that artist familiarity is an important variable to cluster on in general.
+
 ### Gaussian Mixture (GMM)
 
-The next clustering algorithm we used was Gaussian Mixture Models. To find the optimal number of components, we utilized the elbow method using Akaike Information Criterion to find the best K.
+The next clustering algorithm we used was Gaussian Mixture Models. To find the optimal number of components, we utilized the elbow method using Akaike Information Criterion to find the best`K`.
 
-![GMM Elbow Method](../assets/images/GMM%20Elbow%20Method.png)
+![GMM Elbow Method](/brianpak2402/assets/images/GMM%20Elbow%20Method.png)
 
 After that, we performed pairwise clustering on all possible pairs of features of our numerical attributes to determine which features work best for clustering audio tracks. This also allows us to visualize the data clustering easier. To evaluate the pairwise clusterings, we used multiple internal measures: Davies Bouldin Index, Silhouette Score, Calinski-Harabasz Index, and Dunn Index.
 
 **Visualizations of All Feature Pairwise Clusterings for Numerical Features:**
 
-|                                                               |                                                               |                                                               |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![GMM Clustering1](../assets/images/GMM%20Clusterings11.png)  | ![GMM Clustering2](../assets/images/GMM%20Clusterings12.png)  | ![GMM Clustering3](../assets/images/GMM%20Clusterings13.png)  |
-| ![GMM Clustering4](../assets/images/GMM%20Clusterings21.png)  | ![GMM Clustering5](../assets/images/GMM%20Clusterings22.png)  | ![GMM Clustering6](../assets/images/GMM%20Clusterings23.png)  |
-| ![GMM Clustering7](../assets/images/GMM%20Clusterings31.png)  | ![GMM Clustering8](../assets/images/GMM%20Clusterings32.png)  | ![GMM Clustering9](../assets/images/GMM%20Clusterings33.png)  |
-| ![GMM Clustering10](../assets/images/GMM%20Clusterings41.png) | ![GMM Clustering11](../assets/images/GMM%20Clusterings42.png) | ![GMM Clustering12](../assets/images/GMM%20Clusterings43.png) |
+|                                                                          |                                                                          |                                                                          |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| ![GMM Clustering1](/brianpak2402/assets/images/GMM%20Clusterings11.png)  | ![GMM Clustering2](/brianpak2402/assets/images/GMM%20Clusterings12.png)  | ![GMM Clustering3](/brianpak2402/assets/images/GMM%20Clusterings13.png)  |
+| ![GMM Clustering4](/brianpak2402/assets/images/GMM%20Clusterings21.png)  | ![GMM Clustering5](/brianpak2402/assets/images/GMM%20Clusterings22.png)  | ![GMM Clustering6](/brianpak2402/assets/images/GMM%20Clusterings23.png)  |
+| ![GMM Clustering7](/brianpak2402/assets/images/GMM%20Clusterings31.png)  | ![GMM Clustering8](/brianpak2402/assets/images/GMM%20Clusterings32.png)  | ![GMM Clustering9](/brianpak2402/assets/images/GMM%20Clusterings33.png)  |
+| ![GMM Clustering10](/brianpak2402/assets/images/GMM%20Clusterings41.png) | ![GMM Clustering11](/brianpak2402/assets/images/GMM%20Clusterings42.png) | ![GMM Clustering12](/brianpak2402/assets/images/GMM%20Clusterings43.png) |
 
 **Davies Bouldin Index for Feature Pair Clusterings:**
-![GMM DBS](../assets/images/KM%20DBS.png)
+![GMM DBS](/brianpak2402/assets/images/KM%20DBS.png)
 
 **Silhouette Score for Feature Pair Clusterings:**
-![GMM Silhouette](../assets/images/GMM%20Silhouette.png)
+![GMM Silhouette](/brianpak2402/assets/images/GMM%20Silhouette.png)
 
 **Dunn Index for Feature Pair Clusterings:**
-![GMM Dunn](../assets/images/GMM%20Dunn.png)
+![GMM Dunn](/brianpak2402/assets/images/GMM%20Dunn.png)
 
 Next, we carried out the same procedure for string data. Using the elbow method with inertia to find the optimal number of clusters. We see that GMM was ill-suited for clustering string data.
-![GMM Elbow Method String](../assets/images/GMM%20Elbow%20Method%20String.png)
+![GMM Elbow Method String](/brianpak2402/assets/images/GMM%20Elbow%20Method%20String.png)
 
 Since we are using multiple internal measures, there lies inconsistencies on how well features are paired/clustered in comparison to others. For example, according to Silhouette Score, duration/tempo is the second best feature pair for clustering but if we look at the Davies Bouldin visualization, that one says duration/”end of fade in” is the second best clustered. In other words, the ranking of feature pairs differ depending on the metric.
 
 To remedy this, we assigned a score/rank for each metric and then gave an average ranking across all metrics. For a given metric, the pair with the best clustering gets a score of 15. The pair with the second best clustering gets a 14 and so on. We then calculate the average across the scores to get the average rankings based on how well the pairs cluster.
 
 **GMM Feature Pairwise Clustering Rankings**
-![GMM Rankings Chart](../assets/images/GMM%20Ranking%20Chart.png)
+![GMM Rankings Chart](/brianpak2402/assets/images/GMM%20Ranking%20Chart.png)
 
 | Feature Pair                             | Score |
 | ---------------------------------------- | ----- |
@@ -193,6 +196,10 @@ To remedy this, we assigned a score/rank for each metric and then gave an averag
 | `duration`/`start_of_fade_out`           | 15.0  |
 
 Looking at the results, we can see that songs are best clustered by artist name and release (album name), which makes intuitive sense. The best numerical feature pair is duration and start of fade out. The worst was the “end of fade in” and “artist familiarity”.
+
+### General Discussion
+
+To compare performance between methods, we mainly look at Silhouette scores and Davie Bouldin indices since these are the metrics shared between all three methods. We found that K-Means and GMM produced relatively similar results across the pairs of variables, and ranked them similarly. Duration and tempo seemed to be important variables to cluster on. For Hierarchical Clustering, we found that performance across different pairs of variables were more consistent and generally better than the other two methods. For example, HC had a Silhouette score ranging from around 0.3 to 0.5 across all pairs, whereas K-Means and GMM ranged from around -0.1 to 0.25 across all pairs (higher is better for Silhouette score). We also found that K-Mean and GMM had a much higher variance on the Davie Bouldin index, with values ranking from 0 to 35 while HC was consistently between 0 and 1 (lower is better for DB index). From this, we conclude that Hierarchical Clustering performed the best. This intuitively makes sense because songs typically fall into hierarchical genres and subgenres.
 
 ### Next Steps
 
