@@ -205,11 +205,13 @@ To find the optimal value for $\epsilon$, we computed the averages of the distan
 
 To find the optimal value for `min_samples`, we performed DBSCAN on our dataset with all possible `min_sample` values from 1-11, with our optimal $\epsilon=0.5$ and plotted the silhouette score for each clustering as follows:
 ![DBSCAN min_sample Silhouette Scores](/music-clustering-report/assets/images/DBSCAN%20min_samples%20silhouette%20scores.png)
+
 We concluded that the optimal value for `min_samples` was 10.
 
 We used all possible pairs of the numerical variables, and performed DBSCAN clustering on each pair. This allowed us to easily visualize the clustering as well as determine which pairs of variables do the best job at creating clusters.
 
 **Visualizations of DBSCAN Clusterings**
+| | |
 |---------|---------|-------|
 |![DBSCAN CLUSTERINGS11](/music-clustering-report/assets/images/DBSCAN%20Clusterings11.png)|![DBSCAN CLUSTERINGS12](/music-clustering-report/assets/images/DBSCAN%20Clusterings12.png)|![DBSCAN CLUSTERINGS13](/music-clustering-report/assets/images/DBSCAN%20Clusterings13.png)|
 |![DBSCAN CLUSTERINGS21](/music-clustering-report/assets/images/DBSCAN%20Clusterings21.png)|![DBSCAN CLUSTERINGS22](/music-clustering-report/assets/images/DBSCAN%20Clusterings22.png)|![DBSCAN CLUSTERINGS23](/music-clustering-report/assets/images/DBSCAN%20Clusterings23.png)|
