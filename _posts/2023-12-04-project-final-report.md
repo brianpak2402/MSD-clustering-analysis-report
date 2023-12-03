@@ -137,6 +137,7 @@ Since performance of a given pair of variables can vary depending on the metric 
 | `end_of_fade_in`/`loudness`              | 5.67  |
 | `start_of_fade_out`/`loudness`           | 3.33  |
 | `duration`/`tempo`                       | 1     |
+|                                          |       |
 
 From hierarchical clustering, artist familiarity/duration performs the best, and it seems that artist familiarity is an important variable to cluster on in general.
 
@@ -193,6 +194,7 @@ To remedy this, we assigned a score/rank for each metric and then gave an averag
 | `duration`/`tempo`                       | 13.0  |
 | `start_of_fade_out`/`tempo`              | 14.0  |
 | `duration`/`start_of_fade_out`           | 15.0  |
+| `artist_name`/`release`                  | 16.0  |
 
 Looking at the results, we can see that songs are best clustered by artist name and release (album name), which makes intuitive sense. The best numerical feature pair is duration and start of fade out. The worst was the “end of fade in” and “artist familiarity”.
 
@@ -211,14 +213,14 @@ We concluded that the optimal value for `min_samples` was 10.
 We used all possible pairs of the numerical variables, and performed DBSCAN clustering on each pair. This allowed us to easily visualize the clustering as well as determine which pairs of variables do the best job at creating clusters.
 
 **Visualizations of DBSCAN Clusterings**
-| | |
-|---------|---------|-------|
-|![DBSCAN CLUSTERINGS11](/music-clustering-report/assets/images/DBSCAN%20Clusterings11.png)|![DBSCAN CLUSTERINGS12](/music-clustering-report/assets/images/DBSCAN%20Clusterings12.png)|![DBSCAN CLUSTERINGS13](/music-clustering-report/assets/images/DBSCAN%20Clusterings13.png)|
-|![DBSCAN CLUSTERINGS21](/music-clustering-report/assets/images/DBSCAN%20Clusterings21.png)|![DBSCAN CLUSTERINGS22](/music-clustering-report/assets/images/DBSCAN%20Clusterings22.png)|![DBSCAN CLUSTERINGS23](/music-clustering-report/assets/images/DBSCAN%20Clusterings23.png)|
-|![DBSCAN CLUSTERINGS31](/music-clustering-report/assets/images/DBSCAN%20Clusterings31.png)|![DBSCAN CLUSTERINGS32](/music-clustering-report/assets/images/DBSCAN%20Clusterings32.png)|![DBSCAN CLUSTERINGS33](/music-clustering-report/assets/images/DBSCAN%20Clusterings33.png)|
-|![DBSCAN CLUSTERINGS41](/music-clustering-report/assets/images/DBSCAN%20Clusterings41.png)|![DBSCAN CLUSTERINGS42](/music-clustering-report/assets/images/DBSCAN%20Clusterings42.png)|![DBSCAN CLUSTERINGS43](/music-clustering-report/assets/images/DBSCAN%20Clusterings43.png)|
-|![DBSCAN CLUSTERINGS51](/music-clustering-report/assets/images/DBSCAN%20Clusterings51.png)|![DBSCAN CLUSTERINGS52](/music-clustering-report/assets/images/DBSCAN%20Clusterings52.png)|![DBSCAN CLUSTERINGS53](/music-clustering-report/assets/images/DBSCAN%20Clusterings53.png)|
-|![DBSCAN CLUSTERINGS61](/music-clustering-report/assets/images/DBSCAN%20Clusterings61.png)|![DBSCAN CLUSTERINGS62](/music-clustering-report/assets/images/DBSCAN%20Clusterings62.png)||
+
+|                                                                                            |                                                                                            |                                                                                            |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| ![DBSCAN CLUSTERINGS11](/music-clustering-report/assets/images/DBSCAN%20Clusterings11.png) | ![DBSCAN CLUSTERINGS12](/music-clustering-report/assets/images/DBSCAN%20Clusterings12.png) | ![DBSCAN CLUSTERINGS13](/music-clustering-report/assets/images/DBSCAN%20Clusterings13.png) |
+| ![DBSCAN CLUSTERINGS21](/music-clustering-report/assets/images/DBSCAN%20Clusterings21.png) | ![DBSCAN CLUSTERINGS22](/music-clustering-report/assets/images/DBSCAN%20Clusterings22.png) | ![DBSCAN CLUSTERINGS23](/music-clustering-report/assets/images/DBSCAN%20Clusterings23.png) |
+| ![DBSCAN CLUSTERINGS31](/music-clustering-report/assets/images/DBSCAN%20Clusterings31.png) | ![DBSCAN CLUSTERINGS32](/music-clustering-report/assets/images/DBSCAN%20Clusterings32.png) | ![DBSCAN CLUSTERINGS33](/music-clustering-report/assets/images/DBSCAN%20Clusterings33.png) |
+| ![DBSCAN CLUSTERINGS41](/music-clustering-report/assets/images/DBSCAN%20Clusterings41.png) | ![DBSCAN CLUSTERINGS42](/music-clustering-report/assets/images/DBSCAN%20Clusterings42.png) | ![DBSCAN CLUSTERINGS43](/music-clustering-report/assets/images/DBSCAN%20Clusterings43.png) |
+| ![DBSCAN CLUSTERINGS51](/music-clustering-report/assets/images/DBSCAN%20Clusterings51.png) | ![DBSCAN CLUSTERINGS52](/music-clustering-report/assets/images/DBSCAN%20Clusterings52.png) | ![DBSCAN CLUSTERINGS53](/music-clustering-report/assets/images/DBSCAN%20Clusterings53.png) |
 
 To evaluate the performance of each pair of variables, we used the following metrics: Silhouette score, Davies-Bouldin index, Dunn Index, and the Calinski-Harabasz index. The following visualizations are the results for all pairs of variables.
 
@@ -234,30 +236,36 @@ To evaluate the performance of each pair of variables, we used the following met
 **DBSCAN Feature Pair Clustering Rankings**:
 ![DBSCAN Rankings Chart](/music-clustering-report/assets/images/DBSCAN%20Rankings%20Chart.png)
 
-| Feature Pair                            | Score |
-| --------------------------------------- | ----- |
-| `artist_familiarity`/`end_of_fade_in`   | 0.8   |
-| `end_of_fade_in`/`tempo`                | 1.6   |
-| `end_of_fade_in`/`loudness`             | 2.4   |
-| `loudness`/`tempo`                      | 3.2   |
-| `end_of_fade_in`/`start_of_fade_out`    | 4.0   |
-| `duration`/`end_of_fade_in`             | 4.8   |
-| `artist_familiarity`/`tempo`            | 5.6   |
-| `artist_familiarity`/ `loudness`        | 6.4   |
-| `duration`/`loudness`                   | 7.2   |
-| `start_of_fade_out`/`tempo`             | 8.0   |
-| `artist_familiarity`/`duration`         | 8.8   |
-| `artist_familiarity`/start_of_fade_out` | 9.6   |
-| `duration`/`tempo`                      | 10.4  |
-| `loudness`/`start_of_fade_out`          | 11.2  |
-| `duration`/`start_of_fade_out`          | 12.0  |
-| `artist_name`/`release`                 | 26.4  |
+| Feature Pair                             | Score |
+| ---------------------------------------- | ----- |
+| `artist_familiarity`/`end_of_fade_in`    | 0.8   |
+| `end_of_fade_in`/`tempo`                 | 1.6   |
+| `end_of_fade_in`/`loudness`              | 2.4   |
+| `loudness`/`tempo`                       | 3.2   |
+| `end_of_fade_in`/`start_of_fade_out`     | 4.0   |
+| `duration`/`end_of_fade_in`              | 4.8   |
+| `artist_familiarity`/`tempo`             | 5.6   |
+| `artist_familiarity`/`loudness`          | 6.4   |
+| `duration`/`loudness`                    | 7.2   |
+| `start_of_fade_out`/`tempo`              | 8.0   |
+| `artist_familiarity`/`duration`          | 8.8   |
+| `artist_familiarity`/`start_of_fade_out` | 9.6   |
+| `duration`/`tempo`                       | 10.4  |
+| `loudness`/`start_of_fade_out`           | 11.2  |
+| `duration`/`start_of_fade_out`           | 12.0  |
+| `artist_name`/`release`                  | 26.4  |
 
 ### Discussion
 
-To compare performance between methods, we mainly look at Silhouette scores and Davies Bouldin indices since these are the metrics shared between all three methods. We found that K-Means and GMM produced relatively similar results across the pairs of variables, and ranked them similarly. Duration and tempo seemed to be important variables to cluster on. For Hierarchical Clustering, we found that performance across different pairs of variables were more consistent and generally better than the other two methods. For example, HC had a Silhouette score ranging from around 0.3 to 0.5 across all pairs, whereas K-Means and GMM ranged from around -0.1 to 0.25 across all pairs (higher is better for Silhouette score). We also found that K-Mean and GMM had a much higher variance on the Davie Bouldin index, with values ranking from 0 to 35 while HC was consistently between 0 and 1 (lower is better for DB index). From this, we conclude that Hierarchical Clustering performed the best. This intuitively makes sense because songs typically fall into hierarchical genres and subgenres.
+To compare performance between methods, we will primarily focus on Silhouette scores and Davies Bouldin indices since these metrics are shared between all four unsupervised methods in this report. We found that K-Means, GMM, and DBSCAN produced relatively similar results across the pairs of metadata attributes and ranked them similarly. The `artist_name`/`release` pair always produced the highest score. However, this pair only contained text data, so we believe that this pair may not be practically meaningful as the highest ranking feature pair. Ignoring text-based feature pairs, we found that the `start_of_fade_out`/`tempo` and `duration`/`tempo` pairs were consistently ranked highest among these three algorithms.
 
-## Video Presentation
+For Hierarchical Clustering, we found that its performance across different pairs of variables were more consistent and generally better than the other three methods. HC had a Silhouette score ranging from around 0.3 to 0.5 across all pairs, whereas K-Means and GMM ranged from around -0.1 to 0.25 across all pairs. While DBSCAN produced higher Silhouette scores above 0.65 for some feature pairs, the scores from this algorithm varied drastically between -0.25 and 0.65, with 40% of feature pairs achieving a negative Silhouette score. We also found that K-Means, GMM, and DBSCAN had a much higher variance on the Davies Bouldin index, with values ranking from 0 to 35 while HC was consistently between 0 and 1.
+
+## Conclusion
+
+Our exploration into clustering analysis on the EchoNest's Million Song Dataset has provided valuable insights into the potential of metadata attributes for grouping similar songs. Across various unsupervised methods such as K-Means, Gaussian Mixture Models (GMM), Hierarchical Clustering, and DBSCAN, certain attributes consistently emerged as key factors in creating meaningful clusters. Across all four of our clustering algorithms applied, `end_of_fade_in` and `artist_familiarity` were consistently included in feature pairs that scored lower clustering rankings while `duration`, `loudness`, and `start_of_fade_out` were consistently included in feature pairs that produced higher clustering scores. This observation proves that there exist certain attributes that we can use to better group similar songs. At the same time, we also have that there are certain features that we can _avoid_ when grouping similar songs together.
+
+While we have shown that there _exist_ features that can group similar songs together, we cannot conclude which attributes can be used to accurately route users to similar songs that they may like from songs that they currently listen to. We only exposed our clustering algorithms to a smaller subset of 10,000 songs from our dataset. As a result, we restricted ourselves to working with data values that produced a landscape that could vary when using a larger dataset. For example, the `duration`/`start_of_fade_out` feature pair produced the highest Silhouette Score and lowest DB index value across all four of our algorithms. When looking at the scatter plot for this feature-pair clustering, however, we saw that the data values for this feature pair formed a straight line. These same attributes may not produce a straight line when using a larger dataset and as a result, the strength of the feature pair will vary as well. Moving forward, with access to a larger dataset, we can refine our understanding of which attributes are most effective in accurately grouping similar songs. This would enable us to enhance the accuracy of music recommendation systems, providing users with more personalized and enjoyable listening experiences.
 
 ## References
 
@@ -273,16 +281,19 @@ To compare performance between methods, we mainly look at Silhouette scores and 
 
 ‌[6] subha5gemini, “MillionSongDataset/subset-compiled.csv,” Github, Apr. 09, 2023. https://github.com/subha5gemini/MillionSongDataset/blob/master/subset-compiled.csv
 ‌
-‌
 
 ## Contributions
 
 The following contribution table displays responsibilities that each member performed in completing this report:
 
-| Member       | Contributions                                                                                                                      |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Ethan Torone | GMM - Coding & Results/Discussion                                                                                                  |
-| Edward Chen  | HC - Coding & Results/Discussion, General Discussion                                                                               |
-| Brian Pak    | Data Cleaning/Pre-Processing - Coding & Reporting, Introduction, Problem Definition, Methods, DBSCAN - Coding & Results/Discussion |
-| John Pham    | K-Means - Coding & Results/Discussion                                                                                              |
-| Vibhav Kumar | Data Cleaning & Pre-Processing - Coding & Reporting, Next Steps                                                                    |
+| Member       | Contributions                                                                           |
+| ------------ | --------------------------------------------------------------------------------------- |
+| Ethan Torone | GMM - Coding & Results/Discussion, Video Presentation                                   |
+| Edward Chen  | HC - Coding & Results/Discussion, General Discussion, Video Presentation                |
+| Brian Pak    | Data Cleaning/Pre-Processing - Coding & Reporting, DBSCAN - Coding & Results/Discussion |
+| John Pham    | K-Means - Coding & Results/Discussion, Video Presentation                               |
+| Vibhav Kumar | Data Cleaning & Pre-Processing - Coding & Reporting, Video Presentation                 |
+
+## Video Presentation
+
+<!-- TODO: PASTE VIDEO PRESENTATION HERE -->
