@@ -296,4 +296,4 @@ The following contribution table displays responsibilities that each member perf
 
 ## Video Presentation
 
-<!-- TODO: PASTE VIDEO PRESENTATION HERE -->
+<iframe src="https://drive.google.com/file/d/1tZ9pVJiEIcBcMmCCsKEG7o-FImrHColx/preview" width="1280" height="960" allow="autoplay"></iframe>
